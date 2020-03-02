@@ -1,5 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
+const rename = require("gulp-rename");
+const sass = require('gulp-sass')
 
 gulp.task('hello', function(done) {
   console.log('Привет мир');
@@ -15,3 +17,15 @@ gulp.task('browser-sync', function() {
   });
   gulp.watch("./*.html").on('change', browserSync.reload);
 });
+
+gulp.task('rename', function(done) {
+  gulp.src('./css/style.css')
+  .pipe(sass({
+    outputStyle: 'compressed'
+  }))
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest('./css/'));
+  done();
+})

@@ -7,7 +7,7 @@ const sass = require('gulp-sass');
 // Static server
 function bs() {
   serveSass();
-  compress();
+  // compress();
   browserSync.init({
       server: {
           baseDir: "./"
@@ -24,17 +24,17 @@ function serveSass(done) {
     // .pipe(sass({outputStyle: 'compressed'}))
     // .pipe(rename({suffix: '.min'}))
     .pipe(dest('./css/'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
     done();
 };
 
-function compress(done) {
-  return src('./css/main.css')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(dest('./css/'))
-    .pipe(browserSync.stream());
-    done();
-};
+// function compress(done) {
+//   return src('./css/style.css')
+//     .pipe(sass({outputStyle: 'compressed'}))
+//     .pipe(rename({suffix: '.min'}))
+//     .pipe(dest('./css/'))
+//     .pipe(browserSync.stream())
+//     done();
+// };
 
 exports.default = bs;

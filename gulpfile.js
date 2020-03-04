@@ -1,31 +1,40 @@
-const gulp = require('gulp');
+const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const rename = require("gulp-rename");
-const sass = require('gulp-sass')
+const sass = require('gulp-sass');
 
-gulp.task('hello', function(done) {
-  console.log('Привет мир');
-  done();
-});
 
 // Static server
-gulp.task('browser-sync', function() {
+function bs() {
+  serveSass();
+  compress();
   browserSync.init({
       server: {
           baseDir: "./"
       }
   });
-  gulp.watch("./*.html").on('change', browserSync.reload);
-});
+  watch("./*.html").on('change', browserSync.reload);
+  watch("./sass/**/*.sass", serveSass);
+  watch("./js/*.js").on('change', browserSync.reload);
+};
 
-gulp.task('rename', function(done) {
-  gulp.src('./css/style.css')
-  .pipe(sass({
-    outputStyle: 'compressed'
-  }))
-  .pipe(rename({
-    suffix: '.min'
-  }))
-  .pipe(gulp.dest('./css/'));
-  done();
-})
+function serveSass(done) {
+  return src('./sass/*.sass')
+    .pipe(sass())
+    // .pipe(sass({outputStyle: 'compressed'}))
+    // .pipe(rename({suffix: '.min'}))
+    .pipe(dest('./css/'))
+    .pipe(browserSync.stream());
+    done();
+};
+
+function compress(done) {
+  return src('./css/main.css')
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(dest('./css/'))
+    .pipe(browserSync.stream());
+    done();
+};
+
+exports.default = bs;

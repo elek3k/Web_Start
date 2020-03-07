@@ -21,7 +21,7 @@ function bs() {
 };
 
 function serveSass(done) {
-  return src('./sass/**/*.sass, ./sass/**/*.scss')
+  return src('./sass/**/*.sass', './sass/**/*.scss')
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(autoprefixer({
     cascade: false

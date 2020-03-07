@@ -16,6 +16,7 @@ function bs() {
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
+  watch("./sass/**/*.scss", serveSass);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 

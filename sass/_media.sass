@@ -20,12 +20,9 @@
   .hero
     &__instagram
       display: none
-    &__content
 @media screen and ( max-width: 576px )
   .menu
     padding-top: 3px
-    .logo__link
-      font-size: 12px
   .contacts
     &__phone
       margin-right: 50px
@@ -33,33 +30,29 @@
       text-decoration: none
     &__button
       display: none
-  .title
-    
-    font-size: 1.64rem
-    line-height: 1.4
   .hero
     justify-content: flex-start
     padding-top: 142px
+    &__content
+      padding-right: 25px
     &__title
-      max-width: 22.83rem
-      font-size: 23px
-      line-height: 132.83%
+      margin-top: 50px
+      margin-bottom: 35px
+      max-width: 35rem
+      font-size: 29px
+      line-height: 150.83%
     &__scroll-down
       display: none
-    &__content
-      max-width: 30rem
-      margin-left: 18px
-      margin-right: 17px
     &__text
-      margin-bottom: 2.8rem
-      max-width: 26.5rem
+      margin-bottom: 50px
+      max-width: 90%
       font-size: 18px
       line-height: 135.84%
     &__button
       display: block
       width: 100%
       max-width: 28.16rem
-      margin-bottom: 2.3rem
+      margin-bottom: 2.1rem
       font-size: 13px
       line-height: 15px
 @media screen and ( max-width: 396px )
@@ -69,6 +62,23 @@
   .contacts
     &__phone
       margin-right: 15px
+@media screen and ( max-width: 377px )
+  .menu
+    .logo__link
+      font-size: 12px
+  .hero
+    &__title
+      margin-top: 0
+      margin-bottom: 13px
+      max-width: 35rem
+      font-size: 23px
+      line-height: 132.83%  
+    &__content
+      max-width: 30rem
+      margin-left: 18px
+    &__text
+      margin-bottom: 2.8rem
+      max-width: 26.5rem
 @media screen and ( max-height: 580px )
   .hero
     &__scroll-down

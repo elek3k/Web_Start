@@ -1,6 +1,7 @@
 .types
   &__section-title
     margin-bottom:  2rem
+    font-size: 0.95rem
 .row
   display: flex
   align-items: start
@@ -21,19 +22,26 @@
     font-size: 1.29rem
     margin-top: 0
     margin-bottom: 0.7rem
+    padding-left: 0.4rem
   &__list
     margin: 0 0 2.5rem 1rem
     padding: 0
+    padding-left: 0.53rem
     font-size: 1.07rem
     line-height: 1.79rem
     color: $secondary
   &__pricetag
     position: absolute
-    left: 0
+    left: 5px
     bottom: -1.79rem
+    width: 100%
+    max-width: 16.28rem
+    text-align: center
     font-size: 1.29rem
     font-family: 'Yeseva One', cursive
     text-transform: uppercase
     background-color: $primary
     color: $light
-    padding: 1.214rem 2.6rem
+    padding: 1.214rem 0
+    & > sup
+      font-size: 0.9rem

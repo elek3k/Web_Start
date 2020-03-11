@@ -29,6 +29,16 @@
       width: 90%
     &__instagram
       display: none
+@media screen and ( max-width: 788px )
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 4.3rem
+  .card
+    &__text
+      margin-left: 0
 @media screen and ( max-width: 576px )
   .menu
     padding-top: 3px
@@ -96,6 +106,27 @@
       margin-bottom: 2.8rem
       width: 100%
       max-width: 26.5rem
+
+      // section types
+  .types
+    &__section-title
+      margin-bottom: 3.5rem
+      font-size: 1.2rem
+    &__card
+      margin-bottom: 6.6rem
+  .card
+    &__title
+      font-size: 1.2rem
+    &__text
+      margin-top: -11.7rem
+      max-width: 22.6rem
+    &__list
+      padding-left: 0.73rem
+      line-height: 1.9rem
+      margin-bottom: 1.6rem
+    &__pricetag
+      max-width: 15.7rem
+      padding: 1rem 0
 @media screen and ( max-height: 580px )
   .hero
     &__scroll-down

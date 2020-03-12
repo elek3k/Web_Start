@@ -39,6 +39,15 @@
   .card
     &__text
       margin-left: 0
+      // section projects
+  .projects
+    &::before
+      height: 100%
+    &__section-title
+      padding-top: 1.5rem
+      color: $light
+    .projects__card
+      margin-bottom: 6rem 
 @media screen and ( max-width: 576px )
   .menu
     padding-top: 3px
@@ -127,6 +136,30 @@
     &__pricetag
       max-width: 15.7rem
       padding: 1rem 0
+
+      // section projects
+  .projects
+    .section-title
+      font-size: 1.2rem
+      margin-bottom: 3.15rem
+    &__section-subtitle
+      max-width: 305px
+      font-size: 1.3rem
+      line-height: 135.84%
+    &__card
+      .card__text
+        &--padd
+         padding-bottom: 0.2rem
+    .card
+      margin-bottom: 6.8rem
+      &__item
+        &:nth-of-type(9),
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12)
+          display: none
+          
+
 @media screen and ( max-height: 580px )
   .hero
     &__scroll-down

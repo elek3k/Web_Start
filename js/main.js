@@ -43,7 +43,8 @@ $(document).ready(function () {
   // объявление переменных
   var modal = $('.modal'),
   modalBtn = $('[data-toggle=modal]'),
-  closeBtn = $('.modal__close');
+  closeBtn = $('.modal__close'),
+  scrollUp = $('.page-scroll__up');
 
 // присвоение класса .modal--visible для модального окна при нажатии не кнопку
   modalBtn.on('click', function () {
@@ -63,10 +64,24 @@ $(document).ready(function () {
 });
 
 // закрытие модального окна по нажатию мышки вне диалогового  окна
-$(document).mouseup(function (e) {
-  if (modal.has(e.target).length === 0) {
-    modal.removeClass('modal--visible')
-  }
-});
+  $(document).mouseup(function (e) {
+    if (modal.has(e.target).length === 0) {
+      modal.removeClass('modal--visible')
+    }
+  });
+
+  // плавающая кнопка прокрутки станицы вверх
+  $(window).scroll(function() {
+		if($(this).scrollTop() > 400) {
+			scrollUp.show();
+		} else {
+			scrollUp.hide();
+		}
+	});
+ 
+	scrollUp.click(function(){
+		$('html, body').animate({scrollTop: 0}, 600);
+		return false;
+	});
 
 });

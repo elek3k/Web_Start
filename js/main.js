@@ -1,4 +1,8 @@
+/*
+// отслеживание окончания загрузки страницы и после этого выполнения функции
 document.addEventListener("DOMContentLoaded", function(event) { 
+
+  // объявление переменных
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
@@ -29,5 +33,40 @@ document.addEventListener("DOMContentLoaded", function(event) {
       modal.classList.remove("modal--visible");
     }
   });
+
+});
+*/
+
+// отслеживание окончания загрузки страницы и после этого выполнения функции
+$(document).ready(function () {
+
+  // объявление переменных
+  var modal = $('.modal'),
+  modalBtn = $('[data-toggle=modal]'),
+  closeBtn = $('.modal__close');
+
+// присвоение класса .modal--visible для модального окна при нажатии не кнопку
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible')
+  });
+
+// закрытие модального окна по нажатию на крестик
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible')
+  });
+
+// закрытие модального окна по нажатию клавиши esc
+  $(this).keydown(function (e) {
+    if (e.which === 27) {
+      modal.removeClass('modal--visible')
+    } 
+});
+
+// закрытие модального окна по нажатию мышки вне диалогового  окна
+$(document).mouseup(function (e) {
+  if (modal.has(e.target).length === 0) {
+    modal.removeClass('modal--visible')
+  }
+});
 
 });

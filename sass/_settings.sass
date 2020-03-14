@@ -8,12 +8,33 @@ body
 img
   max-width: 100%
 .section 
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
-    font-family: 'Yeseva One'
     text-align: center
-    text-transform: uppercase
+    &__word
+        display: flex
+        align-items: center
+        &::after
+          content: ''
+          width: 90px
+          height: 2px
+          margin-left: 2rem
+          background-color: $primary
+    &--left
+      text-align: left
     &__heading
+      font-family: 'Yeseva One'
       font-weight: normal
+      text-transform: uppercase
+      line-height: 138.6%
+      &--primary
+        color: $primary
+    &__text
+      max-width: 31.57rem
+      font-size: 1.28rem
+      line-height: 2.07rem
     &__image
       display: flex
       align-items: center

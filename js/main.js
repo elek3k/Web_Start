@@ -82,6 +82,26 @@ $(document).ready(function () {
 	scrollUp.click(function(){
 		$('html, body').animate({scrollTop: 0}, 600);
 		return false;
-	});
+  });
+  
+  // инициализация слайдера
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
 
+  var next = $('.swiper-button-next'),
+      prev = $('.swiper-button-prev'),
+      bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 15 + bullets.width() + 15)
+  bullets.css('left', prev.width() + 15)
 });

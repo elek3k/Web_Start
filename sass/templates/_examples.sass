@@ -1,27 +1,42 @@
+.examples
+  padding-top: 97px
+  &__row
+    position: relative
+    padding-left: 20px
+  &__heading
+    margin-bottom: 22px
+  &__section-title
+    margin-bottom: 30px
 .swiper
+  &-container
+    min-height: 274px
   &__img
-    height: 100%
+   padding-left: 55px
+   padding-top: 24px
   &-slide
     display: flex
     flex-wrap: wrap
     &__text
-      flex-basis: 50%
-      margin-bottom: 3rem
+      flex-basis: 38%
+      margin-bottom: 1.4rem
     &__heading
       font-size: 1.285rem
       line-height: 1.78rem
       font-family: 'Yseva One'
       color: $primary
       text-transform: uppercase
-      margin-bottom: 0.64rem
+      margin-bottom: 0.54rem
+    &__value
+      margin-bottom: 3px
   &-pagination
+    text-align: left
     &-bullet
       background-color: rgba($light, 0.3)
       &-active
         background-color: $light
   &-button
     &-prev, &-next
-      bottom: 10px
+      bottom: 0
       top: auto
       width: 42px
       height: 14px
@@ -34,4 +49,7 @@
       background: url('../img/arrow-prev.svg') no-repeat center / 42px 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
+  bottom: -2px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 9px
 

@@ -51,18 +51,29 @@
   
   // section examples
   .examples
+    padding-top: 35px
+    .section-title
+      &__word
+        &::after
+          display: none
+      &__text
+        max-width: 420px
     .row
       padding-right: 20px
       .col
         &-40
           margin: auto
-          max-width: 380px
-          width: auto
+          margin-left: 0
+          min-width: 60%
         &-60
-           max-width: 90%
-           width: auto
+           max-width: 95%
+           height: auto
 
     .swiper
+      &-container
+        margin-left: 0
+      &-slide
+        max-width: 520px
       &__img
         padding: 0
         padding-top: 20px
@@ -120,9 +131,6 @@
     .section-title
       &__heading--primary
         font-size: 22px
-      &__word
-        &::after
-          display: none
     .swiper
       &-container
         &__mod
@@ -182,8 +190,6 @@
         &__heading
           margin-bottom: 1rem
       &__img
-        padding-top: 33px
-        padding-bottom: 20px
         height: 255px
         width: 340px
         

@@ -57,6 +57,11 @@
         &-40
           margin: auto
           max-width: 380px
+          width: auto
+        &-60
+           max-width: 90%
+           width: auto
+
     .swiper
       &__img
         padding: 0
@@ -109,6 +114,19 @@
       margin-bottom: 2.1rem
       font-size: 13px
       line-height: 15px
+
+  // section examples
+  .examples
+    .section-title
+      &__heading--primary
+        font-size: 22px
+      &__word
+        &::after
+          display: none
+    .swiper
+      &-container
+        &__mod
+          width: 280px
 @media screen and ( max-width: 396px )
   .menu
     &__logo
@@ -140,6 +158,35 @@
       width: 100%
       max-width: 26.5rem
 
+    // section examples
+  .examples
+    .row
+      .col-60
+        max-width: 100%
+    .section-title
+      margin-bottom: 17px;
+      &__heading--primary
+        font-size: 22px
+      &__word
+        &::after
+          display: none
+    .swiper
+      &-container
+        min-height: 213px
+        &__mod
+          margin-left: 0
+      &-slide
+        &__text
+          &--padding
+            padding-left: 20px
+        &__heading
+          margin-bottom: 1rem
+      &__img
+        padding-top: 33px
+        padding-bottom: 20px
+        height: 255px
+        width: 340px
+        
 
       // section types
   .types

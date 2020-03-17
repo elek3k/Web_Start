@@ -72,6 +72,7 @@
     .swiper
       &-container
         margin-left: 0
+        max-width: 520px
       &-slide
         max-width: 520px
       &__img
@@ -131,10 +132,16 @@
     .section-title
       &__heading--primary
         font-size: 22px
+    .row
+      .col
+        &-40
+          max-width: 100%
     .swiper
       &-container
         &__mod
           width: 280px
+      &__img
+        padding-top: 40px
 @media screen and ( max-width: 396px )
   .menu
     &__logo
@@ -150,6 +157,8 @@
     margin-top: 56px
     padding-top: 88px
     height: 480px
+    &::after
+      display: none
     &__title
       margin-top: 0
       margin-bottom: 13px
@@ -168,9 +177,13 @@
 
     // section examples
   .examples
+    padding-top: 1.15rem
     .row
-      .col-60
-        max-width: 100%
+      .col
+        &-40
+          margin-bottom: 33px
+        &-60
+          max-width: 100%
     .section-title
       margin-bottom: 17px;
       &__heading--primary
@@ -190,7 +203,8 @@
         &__heading
           margin-bottom: 1rem
       &__img
-        height: 255px
+        height: 202px
+        padding-top: 0
         width: 340px
         
 

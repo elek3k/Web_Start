@@ -181,14 +181,38 @@
     <!-- /.examples -->
   
     <!-- Section control -->
-    <section class="section control">
+    <section class="section control ">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title control__section-title section-title--light">
           <h2 class="section-title__heading">Онлайн контроль</h2>
           <div class="section-title__image">
             <img src="img/camera.svg" alt="camera">
           </div>
         </div>
+        <div class="control__video video">
+          <img src="img/controls/play-icon.svg" alt="" class="video__play">
+        </div>
+        <!-- /.control__video vedeo -->
+        <p class="control__text">
+          На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию
+        </p>
+        <!-- /.control__text -->
+        <form action="" class="form control__form">
+          <div class="control__input-group">
+            <label for="user-name" class="label form__label control__label">Имя</label>
+            <input type="text" class="input form__input control__input" id="user-name" placeholder="Как Вас зовут:">
+          </div>
+          <div class="control__input-group">
+            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+          </div>
+          <button class="button button--primary control__button">Отправить</button>
+          <div class="policy control__policy">
+            <input type="checkbox" class="policy__checkbox"name="policy-checkbox" id="policy-checkbox" checked>
+            <label for="policy-checkbox" class="policy__label control-policy__label">Я соглашаюсь с обработкой данных</label>
+          </div>
+          <!-- /.policy -->
+        </form>
       </div>
       <!-- /.container -->
     </section>

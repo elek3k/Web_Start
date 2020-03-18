@@ -10,6 +10,9 @@
   <!-- слайдер -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
+  <!-- анимация -->
+  <link rel="stylesheet" href="css/animate.min.css">
+
   <!-- main css -->
   <link rel="stylesheet" href="css/style.min.css">
   
@@ -184,7 +187,7 @@
     <section class="section control ">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
-          <h2 class="section-title__heading">Онлайн контроль</h2>
+          <h2 class="section-title__heading control__heading">Онлайн контроль</h2>
           <div class="section-title__image">
             <img src="img/camera.svg" alt="camera">
           </div>
@@ -193,7 +196,7 @@
           <img src="img/controls/play-icon.svg" alt="" class="video__play">
         </div>
         <!-- /.control__video vedeo -->
-        <p class="control__text">
+        <p class="animated bounce wow delay-1s control__text">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию
         </p>
         <!-- /.control__text -->
@@ -209,7 +212,7 @@
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input type="checkbox" class="policy__checkbox"name="policy-checkbox" id="policy-checkbox" checked>
-            <label for="policy-checkbox" class="policy__label control-policy__label">Я соглашаюсь с обработкой данных</label>
+            <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
         </form>
@@ -420,11 +423,11 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="" class="form modal__form">
         <label for="user-name" class="label form__label label--light">Имя</label>
-        <input type="text" class="input form__input modal__input" id="user-name" placeholder="Как Вас зовут:">
+        <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как Вас зовут:">
         <label for="user-phone" class="label form__label label--light">Телефон</label>
-        <input type="tel" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+        <input type="tel" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
         <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" class="input form__input modal__input" id="user-email" placeholder="Ваш email:">
+        <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
         <div class="policy modal__policy">
           <input type="checkbox" class="policy__checkbox"name="policy-checkbox" id="policy-checkbox" checked>
           <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
@@ -448,6 +451,9 @@
 
   <!-- слайдер -->
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+  <!-- wow -->
+  <script src="js/wow.min.js"></script>
 
   <!-- подключение js файла -->
   <script src="js/main.js"></script>

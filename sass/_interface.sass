@@ -8,6 +8,7 @@
   font-size: 0.94rem
   &:hover
     cursor: pointer
+    animation: btnShake 200ms
   &--primary
     background-color: $primary
     color: $light
@@ -67,9 +68,10 @@
     right: 2rem
     z-index: 1000
     display: none
-    background: url('../img/scroll-up.svg') no-repeat center / 2.5rem
+    background: url('../img/scroll-up.svg') no-repeat center / 100%
     width: 2.5rem
     height: 2.5rem
     opacity: 0.6
     &:hover
       opacity: 1
+      animation: scrollUpGrow 250ms forwards

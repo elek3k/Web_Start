@@ -105,6 +105,27 @@ $(document).ready(function () {
   next.css('left', prev.width() + 20 + bullets.width() + 20)
   bullets.css('left', prev.width() + 20)
   
+  // инициализация библиотеки wow
   new WOW().init();
-  
+
+  // инициализация собственной анимации при проктрутке страницы
+  var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('.control__text').each(function() {
+			var self = $(this),
+			height = self.offset().top + self.height();
+			if ($(document).scrollTop() + windowHeight >= height) {
+        self.addClass('test');
+      } 
+      else {
+        self.removeClass('test')
+      };
+      if ($(document).scrollTop() + windowHeight >= height + 400) {
+        self.removeClass('test');
+      } 
+    });
+	});
+    
+
 });

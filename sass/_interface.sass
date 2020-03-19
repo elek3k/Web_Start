@@ -35,11 +35,10 @@
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   &::placeholder
     color: $text
-  &--lihgt
+  &--light
     &::placeholder
-    padding-left: 0.2rem
-    color: $light
-    font-size: 1.3rem
+      color: $light
+      font-size: 1.3rem
 .policy
   &__checkbox
     opacity: 0
@@ -51,7 +50,9 @@
   &__label
     display: flex
     align-items: center
-    font-size: 1.13rem
+    font-size: 1.14rem
+    &--center
+      justify-content: center
     &::before
       content: ''
       width: 18px

@@ -481,14 +481,20 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="" class="form modal__form">
 
-        <label for="user-name" class="label form__label label--light">Имя</label>
-        <input type="text" name:"userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как Вас зовут:">
+        <div class="input-group modal__input-group">
+          <label for="user-name" class="label form__label label--light">Имя</label>
+          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как Вас зовут:">
+        </div>
 
-        <label for="user-phone" class="label form__label label--light">Телефон</label>
-        <input type="tel" name:"userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+        <div class="input-group modal__input-group">
+          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+        </div>
 
-        <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" name:"userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+        <div class="input-group modal__input-group">
+          <label for="user-email" class="label form__label label--light">Email</label>
+          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+        </div>
 
         <div class="policy modal__policy">
           <input type="checkbox" class="policy__checkbox" name="policyCheckbox" id="policy-checkbox" checked>
@@ -519,6 +525,9 @@
 
   <!-- валидация форм -->
   <script src="js/jquery.validate.min.js"></script>
+
+  <!-- маски полей формы-->
+  <script src="js/jquery.mask.min.js"></script>
 
   <!-- подключение js файла -->
   <script src="js/main.js"></script>

@@ -125,10 +125,67 @@ $(document).ready(function () {
         self.removeClass('test');
       } 
     });
-	});
+  });
+  
+  //  маска телефона
+   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: '+7(___) ___-__-__'});
     
   // валидация форм
-  $('form').validate({
-    
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      },
+      // правило объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Не меньше двух символов",
+        maxlength: "Максимальная длина имени 15 символов!"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный имейл"
+      }
+    }
   });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // правило объект (блок)
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      // строчное правило
+      userPhone: 'required'
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Не меньше двух символов",
+        maxlength: "Максимальная длина имени 15 символов!"
+      },
+      userPhone: "Заполните поле"
+    }
+  });
+
 });

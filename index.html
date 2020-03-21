@@ -202,12 +202,12 @@
         <!-- /.control__text -->
         <form action="" class="form control__form">
           <div class="control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как Вас зовут:">
+            <label for="control__user-name" class="label form__label control__label">Имя</label>
+            <input type="text" name="userName" class="input form__input control__input" id="control__user-name" placeholder="Как Вас зовут:">
           </div>
           <div class="control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="control__user-phone" class="label form__label control__label">Телефон</label>
+            <input type="tel" name="userPhone" class="input form__input control__input" id="control__user-phone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button animated bounce wow delay-1s ">Отправить</button>
           <div class="policy control__policy">
@@ -422,18 +422,18 @@
         <form action="" class="form footer__form">
 
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как Вас зовут:">
+            <label for="modal__user-name" class="label form__label label--light">Имя</label>
+            <input type="text" name="userName" class="input form__input footer__input input--light" id="modal__user-name" placeholder="Как Вас зовут:">
           </div>
 
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:"> 
+            <label for="modal__user-phone" class="label form__label label--light">Телефон</label>
+            <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="modal__user-phone" placeholder="Ваш номер телефона:"> 
           </div>
 
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light">Вопрос</label>
-            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+            <label for="Modal__user-question" class="label form__label label--light">Вопрос</label>
+            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="Modal__user-question" placeholder="Я хочу спросить:">
           </div>
 
           <div class="policy footer__policy">
@@ -446,6 +446,9 @@
         </form>
       </div>
       <!-- /.footer-wrap -->
+      <div class="map-wrap">
+        <div class="map footer__map" id="Y-map"></div>
+      </div>
     </div>
     <!-- /.container -->
     <div class="footer__menu">
@@ -528,6 +531,11 @@
 
   <!-- маски полей формы-->
   <script src="js/jquery.mask.min.js"></script>
+
+  <!-- Подключение API Яндекс карт -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4085610c-7fe9-4bdc-ae1c-423a74aae17e
+  &lang=ru_RU" type="text/javascript">
+  </script>
 
   <!-- подключение js файла -->
   <script src="js/main.js"></script>

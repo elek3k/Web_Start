@@ -143,7 +143,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 12
       },
       // правило объект (блок)
       userEmail: {
@@ -220,5 +220,39 @@ $(document).ready(function () {
       }
     }
   });
+
+  // иницифлизация карт яндекс
+  ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("Y-map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [44.148599, 43.473896],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 13
+        }),
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Это моё фото',
+          balloonContent: 'Небольшой городок'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/map-icon.jpg',
+          // Размеры метки.
+          iconImageSize: [30, 42],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+      })
+    }
 
 });

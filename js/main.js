@@ -176,7 +176,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       // строчное правило
-      userPhone: 'required'
+      userPhone: 'required',
     }, // сообщения
     messages: {
       userName: {
@@ -185,6 +185,39 @@ $(document).ready(function () {
         maxlength: "Максимальная длина имени 15 символов!"
       },
       userPhone: "Заполните поле"
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10
+      },
+      // правило объект (блок)
+      userQuestion: {
+        required: true,
+        maxlength: 160
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Не меньше двух символов",
+        maxlength: "Максимальная длина имени 15 символов!"
+      },
+      userPhone: "Заполните поле",
+      userQuestion: {
+        required: "Заполните поле"
+      }
     }
   });
 

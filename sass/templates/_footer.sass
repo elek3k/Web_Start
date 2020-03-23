@@ -4,11 +4,11 @@
   &__wrap
     margin: auto
     margin-top: -25rem
-    margin-bottom: 3.714rem
+    margin-bottom: 2.7rem
     padding: 2.5rem
     padding-top: 1rem
-    background-color: $black
     max-width: 63.07rem
+    background-color: $black
   &__title
     margin-bottom: 3.214rem
     font-family: 'Yeseva One', cursive
@@ -30,9 +30,14 @@
     margin-bottom: 3.4rem
     &--full-width
       flex-basis: 100%
-      margin-bottom: 2.6rem
+      margin-bottom: 2.1rem
+    div[id^=modal__user]
+      position: absolute
+      bottom: -20px
+      left: 0
     input
       padding-top: 0.1rem
+      padding-bottom: 0.6rem
     label
       padding: 0
   &__policy
@@ -42,10 +47,38 @@
     margin: auto
     padding: 1.2rem 4.2rem
     font-size: 1.072rem
+  .wrapper
+    display: flex
+    flex-direction: column
+  &__section-title
+    padding-right: 1.7rem
+    margin-bottom: 1.9rem
+    span
+      display: block
+      padding-top: 5px
+  &-social
+    text-align: center
+    padding-right: 1.1rem
+    &__link
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      margin-right: 0.8rem
+      border-radius: 100%
+      &--instagram
+        background: $primary url(../img/footer/icon-instagram.svg) no-repeat center / 1.5rem 1.117rem
+      &--mail
+        background: $primary url(../img/footer/icon-mail.svg) no-repeat center / 1.2rem 1.117rem
+  &__map-wrap
+    margin: auto
+    margin-top: 2.72rem
+    margin-bottom: 5rem
+    width: 100%
+    max-width: 67.5rem
   &__map
-    max-width: 100%
     height: 33.214rem
-    padding: 0 2rem
+    width: 100%
+    padding-right: 1.5rem
   &__menu
     background-color: $dark
-    padding: 3.4rem 0
+    padding: 3.2rem 0

@@ -51,7 +51,23 @@
   .card
     &__text
       margin-left: 0
-  
+
+
+  // section control
+  .control
+    padding-right: 1.5rem
+    padding-left: 1.5rem
+    background-color: $dark
+    color: $light
+    .section-title
+      &__image
+        display: none
+    &__input-group
+      flex-basis: 100%
+      font-size: 1.25rem
+    &__input
+      color: $light
+
   // section examples
   .examples
     padding-top: 35px
@@ -100,23 +116,45 @@
 
   // section footer
   .footer
+    background-color: $black
+    background-image: none
+    &__title
+      font-size: 1.6666666rem
+      margin-bottom: 4.6rem
+    &__form
+      .form__label
+        font-size: 1.25rem
+      .form__input
+        font-size: 1.5rem
+        margin-bottom: 1.7rem
+        &::placeholder
+          font-size: 1.5rem
     &__wrap
+      margin-top: 0
       margin-left: 1.5rem
       margin-right: 1.5rem
+      padding-left: 0
+      padding-right: 0
     &__input-group
       flex-basis: 100%
     &__policy
       .policy__label
         justify-content: start
+        font-size: 1.333rem
     &__button
       width: 100%
       max-width: 28.333rem
+      padding: 1.4rem
+      font-size: 1.25rem
     &__map
       padding: 0 1.5rem
     &__section-title
-      padding-left: 1.5rem
+      padding: 0 20px
       font-size: 1.5rem
+      line-height: 138.6%
       order: 1
+      span
+        display: inline
     &-social
       margin-bottom: 3.166rem
       order: 2
@@ -182,6 +220,33 @@
           width: 280px
       &__img
         padding-top: 40px
+
+  // section footer
+  .footer
+    &__wrap
+      margin-bottom: 0
+      padding-bottom: 1.15rem
+    &__form
+      .input-group
+        div[id^=modal__user]
+          bottom: 0
+    &__policy
+      margin-bottom: 5.5rem
+      .policy__label
+        &::before
+          margin-left: 0
+    &__input-group
+      &--full-width
+        margin-bottom: -0.9rem
+    .policy__checkbox
+      height: 0
+      width: 0
+    &__map
+      height: 21.25rem
+      &-wrap
+        margin-bottom: 2rem
+  &__policy-checkbox
+    line-height: 1rem
 @media screen and ( max-width: 396px )
   .menu
     &__logo
@@ -226,7 +291,7 @@
         &-60
           max-width: 100%
     .section-title
-      margin-bottom: 17px;
+      margin-bottom: 17px
       &__heading--primary
         font-size: 22px
       &__word
@@ -301,6 +366,21 @@
           display: none
       &__pricetag
         padding-left: 3.5rem
+
+
+  // section footer
+  .footer
+    padding-top: 3rem
+    &__section-title
+      margin-bottom: 2rem
+    &-social
+      padding-right: 0
+      padding-left: 20px
+      &__link
+        margin-right: 1.5rem
+
+
+
 @media screen and ( max-height: 580px )
   .hero
     &__scroll-down

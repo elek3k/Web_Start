@@ -60,17 +60,44 @@
     background-color: $dark
     color: $light
     .section-title
-      &__image
-        display: none
+      &__heading
+        margin-bottom: 1.5rem
+    &__heading
+      font-size: 1.833rem
+    &__form
+      .label
+        font-size: 1.4rem
+        margin-bottom: 0
+      div.invalid
+        font-size: 1.3rem
+        bottom: -20px
     &__input-group
       flex-basis: 100%
-      font-size: 1.25rem
+      margin-bottom: 4.5rem
+      &:nth-child(2)
+        margin-bottom: 3rem
     &__input
+      font-size: 1.5rem
       color: $light
+      border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+      &::placeholder
+        font-size: 1.5rem
+        color: $light
+    &__button
+      order: 1
+      width: 100%
+      max-width: 340px
+      max-height: none
+      padding: 1.5rem 0
+      font-size: 1.26rem
+    .policy__label
+      justify-content: start
+      font-size: 1.32rem
 
   // section examples
   .examples
     padding-top: 35px
+    padding-bottom: 26.1rem
     .section-title
       &__word
         &::after
@@ -312,6 +339,34 @@
         height: 202px
         padding-top: 0
         width: 340px
+
+  // section control
+  .control
+    padding-bottom: 0
+    &__video
+      min-height: 18.3rem
+    .video
+      &__play
+        width: 5.5rem
+    &__text
+      font-size: 14px
+      line-height: 175%
+      margin-bottom: 2.3rem
+      &::before
+        margin-top: 2.5rem
+        margin-bottom: 1rem
+    &__input-group
+      &:nth-child(2)
+        margin-bottom: 0
+    .policy
+      &__label
+        margin-bottom: 5.1rem
+        &::before
+          margin-left: 0
+    &__button
+      margin-bottom: -2rem
+        
+
         
 
       // section types

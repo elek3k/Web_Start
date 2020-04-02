@@ -14,6 +14,12 @@
   .examples
     .row
       align-items: center
+  .steps
+    .swiper-slide
+      &__text
+        flex-basis: 85% 
+      &__img
+        max-height: 340px
 @media screen and ( max-width: 991px )
   .menu
     &__logo
@@ -41,6 +47,12 @@
       &-slide
         &__text
           flex-basis: 50%
+
+  .projects
+    padding-bottom: 25rem
+  
+  .steps
+    display: none
 @media screen and ( max-width: 788px )
   .row
     flex-direction: column

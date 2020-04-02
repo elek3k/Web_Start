@@ -85,7 +85,7 @@ $(document).ready(function () {
   });
   
   // инициализация слайдера
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.swiper-container__mod', {
     // Optional parameters
     loop: true,
     pagination: {
@@ -107,16 +107,16 @@ $(document).ready(function () {
 
 
   // инициализация второг слайдера
-  var mySwiper = new Swiper ('.sider-2', {
+  var mySwiper2 = new Swiper ('.slider-2', {
     // Optional parameters
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination2',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
     },
   })
 
@@ -124,7 +124,7 @@ $(document).ready(function () {
       prev = $('.swiper-button-prev2'),
       bullets = $('.swiper-pagination2');
 
-  next.css('left', prev.width() + 25 + bullets.width() + 25)
+  next.css('left', prev.width() + 20 + bullets.width() + 20)
   bullets.css('left', prev.width() + 20)
 
   

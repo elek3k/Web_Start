@@ -113,6 +113,13 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination2',
       type: 'bullets',
+      clickable: true,
+      // renderBullet: function (index, className) {
+      //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+      // },
+      // renderBullet: function (index, className) {
+      //   return '<span class="' + className + '">Slide 2 ' + (index + 1) + '</span>';
+      // },
     },
     navigation: {
       nextEl: '.swiper-button-next2',

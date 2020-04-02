@@ -104,6 +104,30 @@ $(document).ready(function () {
 
   next.css('left', prev.width() + 20 + bullets.width() + 20)
   bullets.css('left', prev.width() + 20)
+
+
+  // инициализация второг слайдера
+  var mySwiper = new Swiper ('.sider-2', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+  var next = $('.swiper-button-next2'),
+      prev = $('.swiper-button-prev2'),
+      bullets = $('.swiper-pagination2');
+
+  next.css('left', prev.width() + 25 + bullets.width() + 25)
+  bullets.css('left', prev.width() + 20)
+
+  
   
   // инициализация библиотеки wow
   new WOW().init();

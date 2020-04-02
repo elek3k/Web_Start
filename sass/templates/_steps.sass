@@ -1,0 +1,86 @@
+.steps
+  padding-top: 2.5rem
+  padding-bottom: 30rem
+  padding-right: 2rem
+  padding-left: 2rem
+  margin-top: -1px
+  font-size: 1.07rem
+  .container
+  &__section-title
+    margin-top: -8rem
+    margin-bottom: 6.25rem
+  &-title
+    &__text
+      margin-bottom: 0
+      font-size: 1.15rem
+      text-transform: uppercase
+  &__heading
+    margin-top: 0.75rem
+  &__br
+    display: block
+  .section-title
+    &__word
+      &::after
+        width: 92px
+        margin-left: 6.15rem
+  &__row
+    display: flex
+    .column
+      &:nth-child(1)
+        padding-left: 1.5rem
+        width: 38.8%
+      &:nth-child(2)
+        width: 61.2%
+  .swiper
+    &-container
+      min-height: 397px        
+    &-slider
+      &__number
+        font-family: 'Yeseva One', cursive
+        font-size: 1.2rem
+    &__img
+      padding: 0
+      margin-top: 0.7rem
+      object-fit: contain
+      // object-position: -10px -50px
+    &-slide
+      &__heading
+        margin-bottom: 0.7rem
+        margin-top: 1.7rem
+        font-size: 1.07rem
+        font-family: 'Yeseva One', cursive
+        line-height: 21px
+      &__text
+        flex-basis: 70%
+      &__row
+        display: flex
+        justify-content: space-between
+      &__description
+        position: relative
+        min-width: 134px
+        margin-bottom: 3rem
+        color: rgba($light, 0.3)
+        &:last-child
+          min-width: 103px
+        &--active
+          color: $light
+      &__number
+        display: block
+        margin-bottom: 0.9rem
+        font-family: 'Yeseva One', cursive
+        &::before
+          content: ''
+          position: absolute
+          left: 1px
+          top: 18px
+          width: 16px
+          height: 1px
+          background-color: $primary
+      &__word
+        display: block
+      &__value
+        line-height: 25px
+        p
+          margin-top: 0.9rem  
+      &__img
+        max-height: 387px

@@ -14,12 +14,20 @@
   .examples
     .row
       align-items: center
+
   .steps
+    padding-bottom: 2px
     .swiper-slide
       &__text
         flex-basis: 85% 
       &__img
         max-height: 340px
+
+  // section team
+  .team
+    &__worker
+      padding: 0 2rem
+        
 @media screen and ( max-width: 991px )
   .menu
     &__logo
@@ -48,11 +56,32 @@
         &__text
           flex-basis: 50%
 
-  .projects
-    padding-bottom: 25rem
   
   .steps
     display: none
+
+    // section team
+  .team
+    &__section
+      padding-bottom: 25rem
+      &::before
+        height: 100%
+    &__worker
+      .worker
+        &__list
+          flex-wrap: wrap
+          align-items: center
+        &__card
+          flex-basis: 50%
+          margin-bottom: 6rem
+          &:last-child
+            margin-bottom: 0
+        &__logo
+          left: 3.7rem
+        &__img
+          text-align: center
+        &__text
+          color: $light
 @media screen and ( max-width: 788px )
   .row
     flex-direction: column
@@ -146,6 +175,9 @@
 
   // section projects
   .projects
+    padding-bottom: 0
+    &__row
+      padding: 0 1.5rem 
     .container
       padding: 0
     &::before
@@ -159,6 +191,50 @@
         padding-bottom: 21.48px
 
 
+  // section team
+  .team
+    .section
+      &-title__heading
+        font-size: 1.833rem
+      &-subtitle
+        max-width: 28.333rem
+        font-size: 1.25rem
+    &__section
+      padding-bottom: 5rem
+    &__worker
+      margin-top: 6.5rem
+      padding-left: 4.416rem
+      padding-right: 1.5rem
+      .worker
+        &__list
+          flex-wrap: wrap
+          flex-direction: column
+          align-items: center
+        &__logo
+          left: -4.6rem
+          top: -4rem
+        &__card
+          flex-basis: 50%
+          margin-bottom: 7.1rem
+        &__description
+          margin-top: -6.6rem
+        &__name
+          font-size: 1.5rem
+        &__position
+          font-size: 1.5rem
+        &__experience
+          font-size: 1.1rem
+        &__img
+          max-width: 25.333
+         
+          img
+            width: 100%
+            //  min-width: 25.333
+            object-fit: cover
+        &__text
+          display: none
+            
+            
 
   // section footer
   .footer
@@ -440,11 +516,19 @@
           display: none
       &__pricetag
         padding-left: 3.5rem
+      &__last
+        margin-bottom: 4.7rem
+
+  
+  //section team
+  .team
+    &__section
+      padding-bottom: 2rem
 
 
   // section footer
   .footer
-    padding-top: 3rem
+    padding-top: 2rem
     &__section-title
       margin-bottom: 2rem
     &-social

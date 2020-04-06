@@ -1,0 +1,89 @@
+.team
+  &__section
+    position: relative
+    padding-top: 1.85rem
+    padding-bottom: 23rem
+    &::before
+      position: absolute
+      content: ''
+      left: 0
+      top: 0
+      height: 449.609px
+      width: 100%
+      background-color: $dark
+      z-index: -1
+    &-title
+      color: $light
+      .section
+        &-title
+          &__heading
+            font-size: 1.428rem
+            margin-bottom: 1rem
+    &-subtitle
+      margin: auto
+      max-width: 32rem
+      font-size: 1.428rem
+      line-height: 1.928rem
+  &__worker
+    margin-top: 5.8rem
+    padding: 0 5.5rem
+    padding-right: 4.9rem
+    .worker
+      &__list
+        display: flex
+        justify-content: space-around
+      &__card
+        position: relative
+      &__logo
+        position: absolute
+        top: -3.5rem
+        left: -4rem
+      &__img
+        max-height: 358px
+      &__description
+        position: relative
+        margin: auto
+        margin-top: -5.8rem
+        max-width: 233px
+        background-color: $light
+      &__about
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        min-height: 93px
+        font-size: 1.285rem
+        text-align: center
+        color: $dark
+      &__position
+        color: $secondary
+      &__name
+        margin: 0
+        margin-bottom: 0.5rem
+        font-family: 'Yeseva One', cursive
+      &__experience
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 44px
+        font-family: 'Yeseva One', cursive
+        font-size: 0.928rem
+        text-transform: uppercase
+        color: $light
+        background-color: $primary
+      &__text
+        position: relative
+        margin: auto
+        max-width: 40rem
+        font-size: 1.428rem
+        line-height: 2.428rem
+        text-align: center
+        &::before
+          content: ''
+          display: block
+          margin: auto
+          margin-top: 3.85rem
+          margin-bottom: 0.6rem
+          height: 2px
+          width: 3.928rem
+          background-color: $primary

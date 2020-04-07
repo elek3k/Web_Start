@@ -141,67 +141,16 @@ $(document).ready(function () {
   })
 
   var slide = $('.swiper-slide__description');
-  for (var i=0; i<slide.length; i++){
+  for (let i=0; i<slide.length; i++){
     $(slide[i]).click(function(e) {
         e.preventDefault();
         $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
         $(this).addClass('swiper-slide__description--active');
-        mySwiper2.slideTo( i,1000,false )
-        mySwiper3.slideTo( i,1000,false )
+        mySwiper2.slideTo( i+1,1000,false )
+        mySwiper3.slideTo( i+1,1000,false )
     });
   }
 
-//   $('.slide1').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 1,1000,false );
-// });
-
-
-//   $('.slide2').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 2,1000,false );
-// });
-//   $('.slide2').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper3.slideTo( 2,1000,false );
-// });
-
-
-
-//   $('.slide3').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 3,1000,false );
-// });
-//   $('.slide4').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 4,1000,false );
-// });
-//   $('.slide5').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 5,1000,false );
-// });
-//   $('.slide6').click(function(e) {
-//     e.preventDefault();
-//     $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-//     $(this).addClass('swiper-slide__description--active');
-//     mySwiper2.slideTo( 6,1000,false );
-// });
-
-  
-
-  
   
   // инициализация библиотеки wow
   new WOW().init();

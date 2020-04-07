@@ -141,18 +141,28 @@ $(document).ready(function () {
   })
 
   var slide = $('.swiper-slide__description');
+  var nextB = $('.swiper-button-next2');
+  var prevB = $('.swiper-button-prev2');
   for (let i=0; i<slide.length; i++){
     $(slide[i]).click(function(e) {
-        e.preventDefault();
-        $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-        $(this).addClass('swiper-slide__description--active');
-        mySwiper2.slideTo( i+1,1000,false )
-        mySwiper3.slideTo( i+1,1000,false )
+      e.preventDefault();
+      $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
+      $(this).addClass('swiper-slide__description--active');
+      mySwiper2.slideTo( i+1,1000,false )
+      mySwiper3.slideTo( i+1,1000,false )
     });
-    // $('.swiper-button-next2').click(function(){
-    //   $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
-    //   $(slide[i]).addClass('swiper-slide__description--active');
-    // })
+    $(nextB).click(function() {
+      if (mySwiper2.realIndex === i) {
+        $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
+        $(slide[i]).addClass('swiper-slide__description--active');
+      }
+    });
+    $(prevB).click(function() {
+      if (mySwiper2.realIndex === i) {
+        $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
+        $(slide[i]).addClass('swiper-slide__description--active');
+      }
+    });
   }
  
   
@@ -194,7 +204,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 12
+        minlength: 17
       },
       // правило объект (блок)
       userEmail: {
@@ -227,7 +237,10 @@ $(document).ready(function () {
         maxlength: 15
       },
       // строчное правило
-      userPhone: 'required',
+      userPhone: {
+        required: true,
+        minlength: 17
+      }
     }, // сообщения
     messages: {
       userName: {
@@ -251,7 +264,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 10
+        minlength: 17
       },
       // правило объект (блок)
       userQuestion: {

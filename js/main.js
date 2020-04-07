@@ -149,8 +149,12 @@ $(document).ready(function () {
         mySwiper2.slideTo( i+1,1000,false )
         mySwiper3.slideTo( i+1,1000,false )
     });
+    // $('.swiper-button-next2').click(function(){
+    //   $(".swiper-slide__row .swiper-slide__description--active").removeClass('swiper-slide__description--active');
+    //   $(slide[i]).addClass('swiper-slide__description--active');
+    // })
   }
-
+ 
   
   // инициализация библиотеки wow
   new WOW().init();

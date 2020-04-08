@@ -47,7 +47,10 @@
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked + 
+    &.invalid ~
+      .policy__label
+        border-bottom: 1px solid red
+    &:checked ~ 
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem

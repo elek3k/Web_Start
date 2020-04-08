@@ -255,6 +255,13 @@ $(document).ready(function () {
   $('.footer__form').validate({
     errorClass: "invalid",
     errorElement: "div",
+  //   errorPlacement: function (error, element) {
+  //     if (element.attr("type") == "checkbox") {
+  //         return element.next('label').append(error);
+  //     }
+  
+  //      error.insertAfter($(element));
+  // },
     rules: {
       // строчное правило
       userName: {

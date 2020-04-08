@@ -41,8 +41,14 @@
     label
       padding: 0
   &__policy
+    position: relative
     flex-basis: 100%
     margin-bottom: 3.6rem
+    div[id^=policy-checkbox]
+      position: absolute
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
   &__button
     margin: auto
     padding: 1.2rem 4.2rem

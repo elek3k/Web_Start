@@ -189,7 +189,7 @@ $(document).ready(function () {
   });
   
   //  маска телефона
-   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: '+7(___) ___-__-__'});
+   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона'});
     
   // валидация форм
   $('.modal__form').validate({
@@ -270,6 +270,9 @@ $(document).ready(function () {
       userQuestion: {
         required: true,
         maxlength: 160
+      },
+      'policy-checkbox': {
+        required: true
       }
     }, // сообщения
     messages: {
@@ -280,6 +283,9 @@ $(document).ready(function () {
       },
       userPhone: "Заполните поле",
       userQuestion: {
+        required: "Заполните поле"
+      },
+      'policy-checkbox': {
         required: "Заполните поле"
       }
     }

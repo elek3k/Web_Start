@@ -210,6 +210,9 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true
       }
     }, // сообщения
     messages: {
@@ -222,6 +225,9 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный имейл"
+      },
+      policyCheckbox: {
+        required: "Необходимо дать согласие на обработку данных"
       }
     }
   });
@@ -240,6 +246,9 @@ $(document).ready(function () {
       userPhone: {
         required: true,
         minlength: 17
+      },
+      'policy-checkbox': {
+        required: true
       }
     }, // сообщения
     messages: {
@@ -248,8 +257,11 @@ $(document).ready(function () {
         minlength: "Не меньше двух символов",
         maxlength: "Максимальная длина имени 15 символов!"
       },
-      userPhone: "Заполните поле"
-    }
+      userPhone: "Заполните поле",
+      'policy-checkbox': {
+        required: "Необходимо дать согласие на обработку данных"
+      }
+    },
   });
 
   $('.footer__form').validate({
@@ -293,7 +305,7 @@ $(document).ready(function () {
         required: "Заполните поле"
       },
       'policy-checkbox': {
-        required: "Заполните поле"
+        required: "Необходимо дать согласие на обработку данных"
       }
     }
   });

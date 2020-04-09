@@ -2,6 +2,9 @@
   .menu
     &__logo
       margin-left: 20px
+  .examples
+    &__row
+      padding-right: 20px
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
@@ -16,7 +19,6 @@
       align-items: center
 
   .steps
-    padding-bottom: 2px
     .swiper-slide
       &__text
         flex-basis: 85% 
@@ -47,6 +49,30 @@
     &__instagram
       display: none
 
+  // section control
+  .control
+    padding-bottom: 3rem
+
+
+  // section types
+  .types
+    &__row
+      .card__text
+        padding-right: 2rem
+  
+
+  // section projecs
+  .projects
+    margin-bottom: 0
+    padding-bottom: 6rem
+    padding-top: 2rem
+    color: $light
+    background: $bg-mobile
+    &__section-subtitle
+      p
+        color: $light
+
+
   // section examples
   .examples
     .swiper
@@ -56,13 +82,16 @@
         &__text
           flex-basis: 50%
 
-  
+     
   .steps
     display: none
 
     // section team
   .team
+    // display: none
+    background: $bg-mobile
     &__section
+      margin-top: 0
       padding-bottom: 25rem
       &::before
         height: 100%
@@ -82,7 +111,37 @@
           text-align: center
         &__text
           color: $light
+
+
+  // section clients
+  .clients
+    display: none
+    // &__row
+    //   flex-wrap: wrap
+    //   justify-content: center
+    //   .client
+    //     &__block
+    //       margin-bottom: 4rem
+    //       &:nth-child(odd)
+    //         margin-right: 5rem
+
+
+  // section footer
+  .footer
+    position: relative
+    
+            
 @media screen and ( max-width: 788px )
+  
+  // section hero
+  .hero
+    &::after
+      display: none
+    &__scroll-down
+      display: none
+  
+  
+  
   .row
     flex-direction: column
     align-items: center
@@ -98,7 +157,8 @@
   .control
     padding-right: 1.5rem
     padding-left: 1.5rem
-    background-color: $dark
+    padding-bottom: 4rem
+    background: $bg-mobile
     color: $light
     .section-title
       &__heading
@@ -106,17 +166,20 @@
     &__heading
       font-size: 1.833rem
     &__form
+      position: relative
+      padding: 0 3rem
+      padding-bottom: 2rem
       .label
         font-size: 1.4rem
         margin-bottom: 0
       div.invalid
         font-size: 1.3rem
-        bottom: -20px
+        bottom: -22px
     &__input-group
       flex-basis: 100%
       margin-bottom: 4.5rem
       &:nth-child(2)
-        margin-bottom: 3rem
+        margin-bottom: 2rem
     &__input
       font-size: 1.5rem
       color: $light
@@ -124,19 +187,32 @@
       &::placeholder
         font-size: 1.5rem
         color: $light
+    &__policy
+      justify-content: start
+      div[id^=policy-checkbox]
+        left: 0
+        width: 100%
+        text-align: left
+        transform: translateX(0)
     &__button
+      position: absolute
+      left: 0
+      bottom: -6.2rem
       order: 1
       width: 100%
-      max-width: 340px
       max-height: none
       padding: 1.5rem 0
       font-size: 1.26rem
     .policy__label
       justify-content: start
+      padding-left: 1.7rem
       font-size: 1.32rem
+      &::before
+        left: -0.5rem
 
   // section examples
   .examples
+    background: $bg-mobile
     padding-top: 35px
     padding-bottom: 26.1rem
     .section-title
@@ -237,7 +313,7 @@
 
   // section footer
   .footer
-    background-color: $black
+    background: $bg-mobile
     background-image: none
     &__title
       font-size: 1.6666666rem
@@ -256,6 +332,7 @@
       margin-right: 1.5rem
       padding-left: 0
       padding-right: 0
+      background: $bg-mobile
     &__input-group
       flex-basis: 100%
       div[id^=modal__user]

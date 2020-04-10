@@ -195,13 +195,13 @@
         text-align: left
         transform: translateX(0)
     &__button
-      position: absolute
-      left: 0
-      bottom: -6.2rem
       order: 1
+      padding: 1.5rem 3rem
+      margin: auto
+      margin-bottom: -8rem
+      max-width: 28.333rem
       width: 100%
       max-height: none
-      padding: 1.5rem 0
       font-size: 1.26rem
     .policy__label
       justify-content: start
@@ -236,12 +236,13 @@
     .swiper
       &-container
         margin-left: 0
-        max-width: 520px
+        // max-width: 520px
       &-slide
-        max-width: 520px
+        // max-width: 520px
       &__img
         padding: 0
         padding-top: 20px
+        max-height: 29rem
         
 
   // section types
@@ -252,6 +253,11 @@
   // section projects
   .projects
     padding-bottom: 0
+    &__section-subtitle
+      p
+        max-width: 31rem
+        margin-left: auto
+        margin-right: auto
     &__row
       padding: 0 1.5rem 
     .container
@@ -313,6 +319,7 @@
 
   // section footer
   .footer
+    padding-top: 3rem
     background: $bg-mobile
     background-image: none
     &__title
@@ -347,7 +354,7 @@
       padding: 1.4rem
       font-size: 1.25rem
     &__map
-      padding: 0 1.5rem
+      padding: 0
     &__section-title
       padding: 0 20px
       font-size: 1.5rem
@@ -414,10 +421,10 @@
       .col
         &-40
           max-width: 100%
-    .swiper
-      &-container
-        &__mod
-          width: 280px
+          .swiper
+            &-container
+              &__mod
+                width: 280px
       &__img
         padding-top: 40px
 
@@ -453,15 +460,20 @@
       margin-left: 15px
   .contacts
     &__phone
-      margin-right: 15px
+      margin-right: 2.5rem
 @media screen and ( max-width: 377px )
+  .header
+    padding-left: 3px
+    padding-right: 5px
+    padding-top: 17px
+    padding-bottom: 20px
   .menu
     .logo__link
       font-size: 12px
   .hero
-    margin-top: 56px
+    margin-top: 46px
     padding-top: 88px
-    height: 480px
+    height: 486px
     &::after
       display: none
     &__title
@@ -482,14 +494,16 @@
 
     // section examples
   .examples
-    padding-top: 1.15rem
+    padding-top: 1.4rem
+    padding-bottom: 1.4rem
     .row
       padding-left: 20px
       .col
         &-40
           margin-bottom: 33px
         &-60
-          max-width: 100%
+          max-width: 28.333rem
+          width: 100%
     .section-title
       margin-bottom: 17px
       &__heading--primary
@@ -497,6 +511,9 @@
       &__word
         &::after
           display: none
+      &__text
+        max-width: 25rem
+        font-size: 1.16rem
     .swiper
       &-container
         min-height: 213px
@@ -516,8 +533,13 @@
   // section control
   .control
     padding-bottom: 0
+    &__heading
+      margin-top: 0.5rem
+    &__section-title
+      margin-top: 0
+      margin-bottom: 3.3rem
     &__video
-      min-height: 18.3rem
+      min-height: 17.2rem
     .video
       &__play
         width: 5.5rem
@@ -526,18 +548,22 @@
       line-height: 175%
       margin-bottom: 2.3rem
       &::before
-        margin-top: 2.5rem
-        margin-bottom: 1rem
+        margin-top: 2.4rem
+        margin-bottom: 1.2rem
+    &__form
+      padding: 0
+      padding-bottom: 7.35rem
     &__input-group
       &:nth-child(2)
-        margin-bottom: 0
+        margin-bottom: 0.3rem 
     .policy
       &__label
-        margin-bottom: 5.1rem
+        margin-left: 0.5rem
+        margin-bottom: 0rem
         &::before
           margin-left: 0
     &__button
-      margin-bottom: -2rem
+      margin-bottom: -9.5rem
         
 
         
@@ -545,7 +571,8 @@
       // section types
   .types
     &__row
-      padding: 0 17px 0 19px
+      padding-left: 0.5rem
+      padding-right: 0.5rem
     &__section-title
       margin-bottom: 3.35rem
       font-size: 1.2rem
@@ -573,7 +600,7 @@
       font-size: 1.26rem
       margin-bottom: 3.15rem
       &__heading
-        margin-bottom: 1.32rem
+        margin-bottom: 1.1rem
     &__section-subtitle
       max-width: 305px
       font-size: 1.25rem
@@ -607,8 +634,19 @@
   // section footer
   .footer
     padding-top: 2rem
+    .container
+      padding-right: 1.5rem
     &__section-title
       margin-bottom: 2rem
+      padding: 0 1rem
+    &__wrap
+      margin: 0
+    &__policy
+      justify-content: start
+      margin-top: 1rem
+      margin-left: 2rem
+      div[id^=policy-checkbox]
+        width: 100%
     &-social
       padding-right: 0
       padding-left: 20px

@@ -37,7 +37,20 @@
   90%
     transform: translate3d(0, -4px, 0)
 
+// Необходимо для удаления белого фоны при автозаполнении input в chrome
 @-webkit-keyframes autofill
   to
     color: inherit
     background: transparent
+
+@keyframes rotation 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(359deg)
+ 
+@keyframes blink 
+  from 
+    opacity: 0.5
+  to 
+    opacity: 1

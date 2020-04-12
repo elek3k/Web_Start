@@ -81,13 +81,43 @@
         background: $primary url(../img/footer/icon-instagram.svg) no-repeat center / 1.5rem 1.117rem
       &--mail
         background: $primary url(../img/footer/icon-mail.svg) no-repeat center / 1.2rem 1.117rem
-  &__map-wrap
+  &__map-wrap //ymap-container
+    position: relative
     margin: auto
     margin-top: 2.72rem
     margin-bottom: 5rem
     width: 100%
     max-width: 67.5rem
-  &__map
+    background: url(../img/footer/map-img.png) no-repeat center / cover
+    .loader 
+      position: absolute
+      z-index: 15
+      top: -100%
+      left: 0
+      box-sizing: border-box
+      width: 100%
+      height: 100%
+      overflow: hidden
+      color: #000000
+      transition: opacity .7s ease
+      opacity: 0
+      background-color: rgba(0,0,0,.55)
+    .loader.is-active
+      top: 0
+      opacity: 1
+    .loader-default:after
+      position: absolute
+      top: calc(50% - 24px)
+      left: calc(50% - 24px)
+      width: 48px
+      height: 48px
+      content: ''
+      animation: rotation 1s linear infinite
+      border: solid 8px #ffffff
+      border-left-color: transparent
+      border-radius: 50%
+  &__map  //map-yandex
+    position: relative
     height: 33.214rem
     width: 100%
     padding-right: 1.5rem

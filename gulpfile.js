@@ -10,9 +10,7 @@ function bs() {
   // [serveSass(), compress()];
   serveSass()
   browserSync.init({
-      server: {
-          baseDir: "./"
-      }
+      proxy: 'webStart.loc',
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
@@ -33,7 +31,6 @@ function serveSass(done) {
   .pipe(browserSync.stream())
   done();
 };
-
 
 
 exports.default = bs

@@ -318,7 +318,7 @@ var spinner = $('.footer__map-wrap').children('.loader');
 var check_if_load = false;
 
   // иницифлизация карт яндекс
-  ymaps.ready(function () {
+  function init () {
       // Создание карты.\
       var myMap = new ymaps.Map("Y-map", {
           // Координаты центра карты.
@@ -352,7 +352,7 @@ var check_if_load = false;
     });
     myMap.geoObjects
         .add(myPlacemark)
-        .add(myPlacemarkWithContent);
+        // .add(myPlacemarkWithContent); // с этим загрузка карты по наведению не работает
 
     // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
   var layer = myMap.layers.get(0).get(0);    
@@ -361,7 +361,7 @@ var check_if_load = false;
     // Скрываем индикатор загрузки после полной загрузки карты
     spinner.removeClass('is-active');
     });
-  })
+  }
   // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
 function waitForTilesLoad(layer) {
   return new ymaps.vow.Promise(function (resolve, reject) {

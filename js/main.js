@@ -46,6 +46,7 @@ $(document).ready(function () {
   modalBtn = $('[data-toggle=modal]'),
   closeBtn = $('.modal__close'),
   closeBtnThanks = $('.modal-thanks__close'),
+  scrollDown = $('.hero__scroll-down');
   scrollUp = $('.page-scroll__up');
 
 // присвоение класса .modal--visible для модального окна при нажатии на кнопку
@@ -88,7 +89,7 @@ $(document).ready(function () {
     }
   });
 
-  // плавающая кнопка прокрутки станицы вверх
+  // показывать и скрывать кнопку прокрутки вверх
   $(window).scroll(function() {
 		if($(this).scrollTop() > 400) {
 			scrollUp.show();
@@ -96,12 +97,21 @@ $(document).ready(function () {
 			scrollUp.hide();
 		}
 	});
- 
+  // плавающая кнопка прокрутки станицы вверх
 	scrollUp.click(function(){
 		$('html, body').animate({scrollTop: 0}, 600);
 		return false;
   });
-  
+
+  // плавающая кнопка прокрутки станицы вверх
+  scrollDown.click(function(){
+    var height = $(window).height();
+		$('html, body').animate({scrollTop: height - 70}, 400);
+		return false;
+  });
+
+
+
   // инициализация слайдера
   var mySwiper = new Swiper ('.swiper-container__mod', {
     // Optional parameters

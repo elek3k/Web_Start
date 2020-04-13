@@ -296,6 +296,22 @@ $(document).ready(function () {
         required: "Необходимо дать согласие на обработку данных"
       }
     },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal-thanks--visible')
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response)
+        }
+      });
+    }
   });
 
   $('.footer__form').validate({
@@ -342,6 +358,22 @@ $(document).ready(function () {
       'policy-checkbox': {
         required: "Необходимо дать согласие на обработку данных"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal-thanks--visible')
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response)
+        }
+      });
     }
   });
 

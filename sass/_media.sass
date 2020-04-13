@@ -368,10 +368,11 @@
       &__link
         width: 3.25rem
         height: 3.25rem
+        background-size: 2rem 2rem
         &--instagram
-          background-size: 2rem
+
         &--mail
-          background-size: 2rem
+
     &__menu
       display: none
 
@@ -382,7 +383,17 @@
       margin: 0
       max-width: 100%
       max-height: 100%
-      background-color: rgba($dark, 0.6)
+      background-color: rgba($dark, 0.8)
+    &__close
+      top: auto
+      right: 50%
+      bottom: 4rem
+      transform: translateX(50%)
+      margin: 0
+      width: 4rem
+      height: 4rem
+    &__title
+      margin-top: -2rem
 @media screen and ( max-width: 576px )
   .menu
     padding-top: 3px

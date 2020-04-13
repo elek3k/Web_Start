@@ -42,11 +42,13 @@ $(document).ready(function () {
 
   // объявление переменных
   var modal = $('.modal'),
+  modalThanks = $('.modal-thanks'),
   modalBtn = $('[data-toggle=modal]'),
   closeBtn = $('.modal__close'),
+  closeBtnThanks = $('.modal-thanks__close'),
   scrollUp = $('.page-scroll__up');
 
-// присвоение класса .modal--visible для модального окна при нажатии не кнопку
+// присвоение класса .modal--visible для модального окна при нажатии на кнопку
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible')
   });
@@ -55,6 +57,10 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible')
   });
+// закрытие модального окн благодарности по нажатию на крестик
+  closeBtnThanks.on('click', function () {
+    modalThanks.toggleClass('modal-thanks--visible')
+  });
 
 // закрытие модального окна по нажатию клавиши esc
   $(this).keydown(function (e) {
@@ -62,11 +68,23 @@ $(document).ready(function () {
       modal.removeClass('modal--visible')
     } 
 });
+// закрытие модального окна благодарности по нажатию клавиши esc
+  $(this).keydown(function (e) {
+    if (e.which === 27) {
+      modalThanks.removeClass('modal-thanks--visible')
+    } 
+});
 
 // закрытие модального окна по нажатию мышки вне диалогового  окна
   $(document).mouseup(function (e) {
     if (modal.has(e.target).length === 0) {
       modal.removeClass('modal--visible')
+    }
+  });
+// закрытие модального окна благодарности по нажатию мышки вне диалогового  окна
+  $(document).mouseup(function (e) {
+    if (modalThanks.has(e.target).length === 0) {
+      modalThanks.removeClass('modal-thanks--visible')
     }
   });
 
@@ -229,6 +247,22 @@ $(document).ready(function () {
       policyCheckbox: {
         required: "Необходимо дать согласие на обработку данных"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalThanks.toggleClass('modal-thanks--visible')
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response)
+        }
+      });
     }
   });
 
@@ -313,9 +347,9 @@ $(document).ready(function () {
 
 
  //Переменная для включения/отключения индикатора загрузки
-var spinner = $('.footer__map-wrap').children('.loader');
-//Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
-var check_if_load = false;
+  var spinner = $('.footer__map-wrap').children('.loader');
+  //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
+  var check_if_load = false;
 
   // иницифлизация карт яндекс
   function init () {

@@ -69,8 +69,17 @@
       display: block
       padding-top: 5px
   &-social
+    display: flex
+    align-items: center
+    justify-content: center
     text-align: center
     padding-right: 1.1rem
+    &__text
+      display: inline-block
+      margin-right: 0.7rem
+      padding-left: 2rem
+      font-size: 1.3rem
+      line-height: 3rem
     &__link
       display: inline-block
       width: 2rem
@@ -81,6 +90,8 @@
         background: $primary url(../img/footer/icon-instagram.svg) no-repeat center / 1.5rem 1.117rem
       &--mail
         background: $primary url(../img/footer/icon-mail.svg) no-repeat center / 1.2rem 1.117rem
+      &--vk
+        background: $primary url(../img/footer/icon-vk.svg) no-repeat center / 1.5rem 1.5rem
   &__map-wrap //ymap-container
     position: relative
     margin: auto
@@ -89,7 +100,7 @@
     width: 100%
     max-width: 67.5rem
     overflow: hidden
-    background: url(../img/footer/map-img.png) no-repeat center / cover
+    background: url(../img/footer/map-img.png) no-repeat center
     .loader 
       position: absolute
       top: -100%
@@ -121,7 +132,6 @@
     position: relative
     height: 33.214rem
     width: 100%
-    padding-right: 1.5rem
   &__menu
     background-color: $dark
     padding: 3.2rem 0

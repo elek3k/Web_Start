@@ -93,10 +93,16 @@ $(document).ready(function () {
   $(window).scroll(function() {
 		if($(this).scrollTop() > 400) {
 			scrollUp.show();
-		} else {
+    } 
+    else {
 			scrollUp.hide();
 		}
-	});
+  });
+  $(window).height(function() {
+		if ($(this).height() > 400) {
+      scrollUp.show();
+    }
+  });
   // плавающая кнопка прокрутки станицы вверх
 	scrollUp.click(function(){
 		$('html, body').animate({scrollTop: 0}, 600);

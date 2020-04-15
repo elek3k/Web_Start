@@ -47,7 +47,8 @@ $(document).ready(function () {
   closeBtn = $('.modal__close'),
   closeBtnThanks = $('.modal-thanks__close'),
   scrollDown = $('.hero__scroll-down');
-  scrollUp = $('.page-scroll__up');
+  scrollUp = $('.page-scroll__up'),
+  header = $('.header');
 
 // присвоение класса .modal--visible для модального окна при нажатии на кнопку
   modalBtn.on('click', function () {
@@ -91,29 +92,27 @@ $(document).ready(function () {
 
   // показывать и скрывать кнопку прокрутки вверх
   $(window).scroll(function() {
-		if($(this).scrollTop() > 400) {
+		if($(this).scrollTop() >= 250) {
 			scrollUp.show();
     } 
     else {
 			scrollUp.hide();
-		}
-  });
-  $(window).height(function() {
-		if ($(this).height() > 400) {
-      scrollUp.show();
     }
   });
+ 
+
   // плавающая кнопка прокрутки станицы вверх
 	scrollUp.click(function(){
 		$('html, body').animate({scrollTop: 0}, 600);
 		return false;
   });
 
-  // плавающая кнопка прокрутки станицы вверх
+  // плавающая кнопка прокрутки станицы вниз
   scrollDown.click(function(){
     var height = $(window).height();
 		$('html, body').animate({scrollTop: height - 70}, 400);
-		return false;
+    return false;
+    
   });
 
 
@@ -220,6 +219,22 @@ $(document).ready(function () {
         self.removeClass('test');
       } 
     });
+  });
+
+  
+  $(document).on('scroll', function() {
+    $(header).each(function() {
+      var self = $(this);
+    if  ($(document).scrollTop() == $(document).height() - $(window).height()) 
+     {
+      self.addClass('header-hide');
+      self.removeClass('header-show')
+     }
+     else {
+      self.removeClass('header-hide')
+      self.addClass('header-show');
+     }
+  });
   });
   
   //  маска телефона

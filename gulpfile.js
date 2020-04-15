@@ -1,8 +1,10 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, series} = require('gulp');   
 const browserSync = require('browser-sync').create();
 const rename = require("gulp-rename");
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const minify = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
 
 
 // Static server
@@ -32,5 +34,51 @@ function serveSass(done) {
   done();
 };
 
+function buildCSS(done) {
+  src('css/**/**.css')
+    .pipe(dest('dist/css/'));
+  done();
+}
 
+function buildjs(done) {
+  src(['js/**.js',])
+    .pipe(minify({
+      ext:{
+        min:'.js'
+    },
+      ignoreFiles: ['*.min.js'],
+      noSource: true
+    }))
+    .pipe(dest('dist/js/'))
+  done();
+}
+
+function buildHTML(done) {
+  src(['**.html', '!thanks.html'])
+    .pipe(htmlmin({ collapseWhitespace: true} ))
+    .pipe(dest('dist/'));
+  done();
+}
+
+function php(done) {
+  src('**.php')
+    .pipe(dest('dist/'));
+  src('phpmailer/**.php')
+  .pipe(dest('dist/phpmailer'));
+  done();
+}
+
+function fonts(done) {
+  src('fonts/**/**')
+    .pipe(dest('dist/fonts'));
+  done();
+}
+
+function img(done) {
+  src('img/**/**')
+    .pipe(dest('dist/img'));
+  done();
+}
+
+exports.build = series(buildCSS, buildjs, buildHTML, php, fonts, img);
 exports.default = bs

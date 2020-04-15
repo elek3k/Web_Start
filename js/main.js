@@ -93,13 +93,13 @@ $(document).ready(function () {
   // показывать и скрывать кнопку прокрутки вверх
   $(window).scroll(function() {
 		if($(this).scrollTop() >= 250) {
-			scrollUp.show();
+			scrollUp.addClass('top-show');
     } 
     else {
-			scrollUp.hide();
+			scrollUp.removeClass('top-show');
     }
   });
- 
+
 
   // плавающая кнопка прокрутки станицы вверх
 	scrollUp.click(function(){
@@ -112,7 +112,7 @@ $(document).ready(function () {
     var height = $(window).height();
 		$('html, body').animate({scrollTop: height - 70}, 400);
     return false;
-    
+
   });
 
 
@@ -221,7 +221,7 @@ $(document).ready(function () {
     });
   });
 
-  
+  // анимация при скролинге страницы до конца, появление и исчезание header 
   $(document).on('scroll', function() {
     $(header).each(function() {
       var self = $(this);

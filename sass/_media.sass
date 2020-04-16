@@ -147,16 +147,8 @@
       display: none
   
   
-  
-  .row
-    flex-direction: column
-    align-items: center
   .types
-    &__card
-      margin-bottom: 4.3rem
-  .card
-    &__text
-      margin-left: 0
+    
 
 
   // section control
@@ -201,13 +193,16 @@
         text-align: left
         transform: translateX(0)
     &__button
-      order: 1
+      position: absolute
+      bottom: -6rem
+      left: 50%
+      transform: translateX(-50%)
+      animation: none
       padding: 1.5rem 3rem
       margin: auto
-      margin-bottom: -8rem
       max-width: 28.333rem
       width: 100%
-      max-height: none
+      max-height: 4.25rem
       font-size: 1.26rem
     .policy__label
       justify-content: start
@@ -228,6 +223,8 @@
       &__text
         max-width: 420px
     .row
+      flex-direction: column
+      align-items: center
       padding-left: 11%
       padding-right: 20px
       .col
@@ -235,10 +232,11 @@
           margin: auto
           margin-left: 0
           min-width: 60%
+          flex-basis: auto
         &-60
           max-width: 95%
-          height: auto
           align-self: flex-start
+          flex-basis: auto
     .swiper
       &-container
         margin-left: 0
@@ -254,6 +252,16 @@
   // section types
   .types
     padding-top: 5.3rem
+    .row
+      flex-direction: column
+      align-items: center
+      .col-30
+        flex-basis: auto
+    &__card
+      margin-bottom: 4.3rem
+  .card
+    &__text
+      margin-left: 0
 
 
   // section projects
@@ -266,6 +274,10 @@
         margin-right: auto
     &__row
       padding: 0 1.5rem 
+      flex-direction: column
+      align-items: center
+      .col-30
+        flex-basis: auto
     .container
       padding: 0
     &::before
@@ -302,7 +314,7 @@
           left: -4.6rem
           top: -4rem
         &__card
-          flex-basis: 50%
+          flex-basis: auto
           margin-bottom: 7.2rem
         &__description
           margin-top: -6.6rem

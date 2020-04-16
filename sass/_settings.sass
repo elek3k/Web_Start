@@ -16,14 +16,17 @@ img
   &-title
     text-align: center
     &__word
-        display: flex
-        align-items: center
-        &::after
-          content: ''
-          width: 90px
-          height: 2px
-          margin-left: 2rem
-          background-color: $primary
+      position: relative
+      display: flex
+      align-items: center
+      &::after
+        position: absolute
+        left: 50%
+        top: 1.3rem
+        content: ''
+        width: 90px
+        height: 2px
+        background-color: $primary
     &--left
       text-align: left
     &--light
@@ -41,14 +44,21 @@ img
       font-size: 1.28rem
       line-height: 2.07rem
     &__image
-      display: flex
-      align-items: center
-      justify-content: center
+      position: relative
+      display: inline-block
       &::after, &::before
+        position: absolute
         content: ''
+        top: 50%
+        transform: translateY(-50%)
         width: 32px
         height: 2px
         background-color: $primary
         margin: 0 10px
+      &::after
+        right: 2.9rem
+      &::before
+        left: 2.7rem
+
 .wrapper-bg
   background: url(../img/wrapper-bg/wrapper-bg.png) no-repeat center / cover

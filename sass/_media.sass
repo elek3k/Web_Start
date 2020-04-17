@@ -137,8 +137,10 @@
     
             
 @media screen and ( max-width: 788px )
-  *
+  .button
     animation: none
+    &:hover
+      animation: none
   // section hero
   .hero
     &::after
@@ -146,9 +148,6 @@
     &__scroll-down
       display: none
   
-  
-  .types
-    
 
 
   // section control
@@ -197,13 +196,15 @@
       bottom: -6rem
       left: 50%
       transform: translateX(-50%)
-      animation: none
       padding: 1.5rem 3rem
       margin: auto
       max-width: 28.333rem
       width: 100%
       max-height: 4.25rem
       font-size: 1.26rem
+      animation: none
+      &:hover
+        animation: none
     .policy__label
       justify-content: start
       padding-left: 1.7rem
@@ -325,11 +326,12 @@
         &__experience
           font-size: 1.1rem
         &__img
-          max-width: 25.333rem
+          max-width: 26.333rem
+          max-height: 29.833rem
+          overflow: hidden
           img
-            max-height: 29.833rem
-            width: 25.333rem
-            object-fit: cover
+            width: 26.333rem
+            // object-fit: cover
         &__text
           display: none
             

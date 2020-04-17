@@ -162,6 +162,11 @@
         margin-bottom: 1.5rem
     &__heading
       font-size: 1.833rem
+    .video
+      &__play
+        width: 100%
+      &::after
+        background-size: 9rem
     &__form
       position: relative
       padding: 0 3rem
@@ -568,17 +573,21 @@
 
   // section control
   .control
-    padding-bottom: 0
+    padding-bottom: 0rem
     &__heading
       margin-top: 0.5rem
     &__section-title
       margin-top: 0
       margin-bottom: 3.3rem
     &__video
-      min-height: 17.2rem
+      overflow: hidden
+      height: 100%
+      max-height: 17.2rem
     .video
       &__play
-        width: 5.5rem
+        width: 100%
+      &::after
+        background-size: 7rem
     &__text
       font-size: 14px
       line-height: 175%
@@ -588,7 +597,7 @@
         margin-bottom: 1.2rem
     &__form
       padding: 0
-      padding-bottom: 7.35rem
+      padding-bottom: 4.5rem
     &__input-group
       &:nth-child(2)
         margin-bottom: 0.3rem 
@@ -599,7 +608,7 @@
         &::before
           margin-left: 0
     &__button
-      margin-bottom: -9.5rem
+      bottom: -2rem
         
 
         

@@ -288,7 +288,9 @@ $(document).ready(function () {
           console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          modalThanks.toggleClass('modal-thanks--visible')
+          modalThanks.toggleClass('modal-thanks--visible');
+          ym(62039818,'reachGoal','formSubmission');
+          return true;
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response)

@@ -22,8 +22,8 @@
   .section-title
     &__word
       &::after
+        left: calc( 50% - 2rem )
         width: 92px
-        margin-left: 6.15rem
   &__row
     display: flex
     .column
@@ -51,11 +51,11 @@
         font-family: 'Yeseva One', cursive
         line-height: 21px
       &__text
-        position: absolute
         flex-basis: 70%
       &__row
         display: flex
         justify-content: space-between
+        padding-right: 1rem
       &__description
         position: relative
         min-width: 134px
@@ -97,3 +97,4 @@
     left: 0
     font-family: 'Yeseva One'
     font-size: 1.1rem
+    letter-spacing: -0.1em

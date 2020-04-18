@@ -42,13 +42,19 @@ $(document).ready(function () {
 
   // объявление переменных
   var modal = $('.modal'),
+  scrollToSite = $('#nav'),
   modalThanks = $('.modal-thanks'),
   modalBtn = $('[data-toggle=modal]'),
   closeBtn = $('.modal__close'),
   closeBtnThanks = $('.modal-thanks__close'),
   scrollDown = $('.hero__scroll-down');
   scrollUp = $('.page-scroll__up'),
+  scrollUpHeader = $('#scrollToHeader'),
   header = $('.header');
+
+
+
+
 
 // присвоение класса .modal--visible для модального окна при нажатии на кнопку
   modalBtn.on('click', function () {
@@ -106,13 +112,25 @@ $(document).ready(function () {
 		$('html, body').animate({scrollTop: 0}, 600);
 		return false;
   });
+  // прокрутка страницы на главный экран
+	scrollUpHeader.click(function(){
+		$('html, body').animate({scrollTop: 0}, 1000);
+		return false;
+  });
 
   // плавающая кнопка прокрутки станицы вниз
   scrollDown.click(function(){
     var height = $(window).height();
-		$('html, body').animate({scrollTop: height - 70}, 400);
+		$('html, body').animate({scrollTop: height}, 400);
     return false;
+  });
 
+  // плавная прокрутка по ссылкам сайта
+  scrollToSite.on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top - 130;
+    $('body,html').animate({scrollTop: top}, 1000);
   });
 
 
@@ -237,6 +255,7 @@ $(document).ready(function () {
   });
   });
   
+
   //  маска телефона
    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона'});
     
@@ -409,6 +428,8 @@ $(document).ready(function () {
       });
     }
   });
+
+  
 
 
  //Переменная для включения/отключения индикатора загрузки

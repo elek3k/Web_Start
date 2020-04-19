@@ -565,7 +565,7 @@ $(function() {
  
 });
 
-// скрипт для вставки видещ с youtube
+// скрипт для вставки видео с youtube
 var player;
 $('.play').on('click', function onYouTubeIframeAPIReady() {
   player = new YT.Player('play', {

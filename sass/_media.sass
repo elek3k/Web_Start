@@ -152,7 +152,7 @@
 
   // section control
   .control
-    padding-right: 1.5rem
+    padding-right: 1.1rem
     padding-left: 1.5rem
     padding-bottom: 4rem
     background: $bg-mobile
@@ -162,11 +162,6 @@
         margin-bottom: 1.5rem
     &__heading
       font-size: 1.833rem
-    .video
-      &__play
-        width: 100%
-      &::after
-        background-size: 9rem
     &__form
       position: relative
       padding: 0 3rem
@@ -468,6 +463,11 @@
                 width: 280px
       &__img
         padding-top: 40px
+  
+  // section control
+  .control
+    .play
+      width: 8rem
 
   // section footer
   .footer
@@ -580,24 +580,21 @@
       margin-top: 0
       margin-bottom: 3.3rem
     &__video
-      overflow: hidden
-      height: 100%
-      max-height: 17.2rem
-    .video
-      &__play
-        width: 100%
-      &::after
-        background-size: 7rem
+      max-height: 17.25rem
+      .video__play
+        height: 17.25rem
+    .play
+      width: 5.083rem
     &__text
       font-size: 14px
       line-height: 175%
       margin-bottom: 2.3rem
       &::before
-        margin-top: 2.4rem
+        margin-top: 1.9rem
         margin-bottom: 1.2rem
     &__form
       padding: 0
-      padding-bottom: 4.5rem
+      padding-bottom: 7.4rem
     &__input-group
       &:nth-child(2)
         margin-bottom: 0.3rem 
@@ -617,9 +614,8 @@
   .types
     &__row
       padding-left: 0.5rem
-      padding-right: 0.5rem
     &__section-title
-      margin-bottom: 3.35rem
+      margin-bottom: 2.85rem
       font-size: 1.2rem
     &__card
       margin-bottom: 6.6rem
@@ -640,10 +636,11 @@
       // section projects
   .projects
     &__row
-      padding: 0 18px
+      padding: 0 1.5rem
+      padding-right: 1rem
     .section-title
       font-size: 1.26rem
-      margin-bottom: 3.15rem
+      margin-bottom: 3rem
       &__heading
         margin-bottom: 1.1rem
     &__section-subtitle
@@ -674,18 +671,26 @@
   .team
     &__section
       padding-bottom: 1.8rem
+      &-subtitle
+        padding: 0
+    &__worker
+      padding-right: 1.1rem
 
 
   // section footer
   .footer
     padding-top: 2rem
     .container
-      padding-right: 1.5rem
+      padding-right: 1.1rem
+      padding-left: 1.5rem
     &__section-title
       margin-bottom: 2rem
       padding: 0 1rem
     &__wrap
       margin: 0
+    .wrapper
+      padding-right: 0
+      padding-left: 0
     &__policy
       justify-content: start
       margin-top: 1rem
@@ -697,6 +702,13 @@
       padding-left: 20px
       &__link
         margin-right: 1.5rem
+
+
+  // Modal
+  .modal
+    .button
+      min-width: 13rem
+      width: 100%
 
 
 

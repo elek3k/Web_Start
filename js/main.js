@@ -260,6 +260,8 @@ $(document).ready(function () {
   //  маска телефона
    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона'});
     
+
+  
   // валидация форм
   $('.modal__form').validate({
     errorClass: "invalid",
@@ -562,5 +564,22 @@ $(function() {
   ymap();
  
 });
+
+// скрипт для вставки видещ с youtube
+var player;
+$('.play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('play', {
+    height: '433',
+    width: '100%',
+    videoId: 'eeB82CFjmuk',
+    events: {
+      'onReady': onPlayerReady,
+    }
+  });
+})
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
 
 });

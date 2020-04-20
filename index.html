@@ -212,9 +212,13 @@
               <img src="img/camera.svg" alt="camera">
             </div>
           </div>
-          <div class="control__video video" id="play">
-            <img src="img/controls/video-mask.jpg" alt="" class="video__play">
-            <img src="img/controls/play-icon.svg" alt="" class="play">
+          <div class="control__video video">
+            <div class="video-wrap">
+              <div class="video__play" id="play">
+                <img src="img/controls/video-mask.jpg" alt="" class="video__play">
+                <img src="img/controls/play-icon.svg" alt="" class="play">
+              </div>
+            </div>
             
             <!-- вставляем видео с youtube -->
             <script src="https://www.youtube.com/iframe_api"></script>
@@ -878,12 +882,12 @@
           <div class="logo menu__logo"><a href="http://hotweboffers.ru/Web_Start/" class="logo__link">repair design project</a>
           </div>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
-            <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#" id="scrollToHeader2" class="nav__item">Главная</a>
+            <a href="#scrollToProjects" class="nav__item">Проекты</a>
+            <a href="#scrollToSteps" class="nav__item">Замер</a>
+            <a href="#scrollToTeam" class="nav__item">Команда</a>
+            <a href="#scrollToClients" class="nav__item">Отзывы</a>
+            <a href="#scrollToFooter" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>

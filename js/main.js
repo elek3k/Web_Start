@@ -42,7 +42,7 @@ $(document).ready(function () {
 
   // объявление переменных
   var modal = $('.modal'),
-  scrollToSite = $('#nav'),
+  scrollToSite = $('.nav'),
   modalThanks = $('.modal-thanks'),
   modalBtn = $('[data-toggle=modal]'),
   closeBtn = $('.modal__close'),
@@ -50,6 +50,7 @@ $(document).ready(function () {
   scrollDown = $('.hero__scroll-down');
   scrollUp = $('.page-scroll__up'),
   scrollUpHeader = $('#scrollToHeader'),
+  scrollUpHeader2 = $('#scrollToHeader2'),
   header = $('.header');
 
 
@@ -118,6 +119,11 @@ $(document).ready(function () {
 		$('html, body').animate({scrollTop: 0}, 1000);
 		return false;
   });
+  // прокрутка страницы на главный экран
+	scrollUpHeader2.click(function(){
+		$('html, body').animate({scrollTop: 0}, 1000);
+		return false;
+  });
 
   // плавающая кнопка прокрутки станицы вниз
   scrollDown.click(function(){
@@ -133,7 +139,6 @@ $(document).ready(function () {
         top = $(id).offset().top - 130;
     $('body,html').animate({scrollTop: top}, 1000);
   });
-
 
 
   // инициализация слайдера

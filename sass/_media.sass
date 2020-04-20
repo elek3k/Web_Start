@@ -395,8 +395,7 @@
     &__menu
       display: none
   
-
-  // section modal-thanks
+  
   .modal-thanks
     &__dialog
       margin: 0
@@ -708,6 +707,7 @@
 
   // Modal
   .modal
+    &__dialog
     .button
       min-width: 13rem
       width: 100%
@@ -729,6 +729,12 @@
     &--outline
       &:hover
         box-shadow: none
+  .nav
+    &__item
+      &:hover
+        color: $primary
+      &:active
+        color: $primary
   .hero
     &__scroll-down
       &:hover
@@ -745,6 +751,9 @@
       &:hover
         opacity: 1
         animation: scrollUpGrow 250ms forwards
+  .control
+    .test
+      animation: textFocus 2s 1s
   
 
 @media screen and ( max-height: 580px )
@@ -756,3 +765,9 @@
   .hero
     &__scroll-down
       display: none
+  .modal
+    &__dialog
+      height: 100vh
+      overflow: scroll
+    &__button
+      align-self: flex-start

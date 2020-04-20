@@ -31,6 +31,7 @@
       padding: 0 2rem
         
 @media screen and ( max-width: 991px )
+
   .menu
     &__logo
       margin-left: 50px
@@ -712,6 +713,39 @@
       width: 100%
 
 
+
+@media screen and ( min-width: 992px  )
+  .logo
+    &__link
+      &:hover
+        color: lighten($primary, 5%)
+  .button
+    &:hover
+      animation: btnShake 200ms
+    &--primary
+      &:hover
+        background-color: darken($primary, 6.25%)
+        box-shadow: none
+    &--outline
+      &:hover
+        box-shadow: none
+  .hero
+    &__scroll-down
+      &:hover
+        color: $primary
+  .phone
+    &:hover
+      color: lighten($primary, 5%)
+  .instagram
+    &__link
+      &:hover
+        color: lighten($primary, 5%)
+  .page-scroll
+    &__up
+      &:hover
+        opacity: 1
+        animation: scrollUpGrow 250ms forwards
+  
 
 @media screen and ( max-height: 580px )
   .hero

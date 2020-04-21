@@ -6,7 +6,14 @@
 
   <!-- шрифты -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet"> -->
-  
+  <!-- вафиконка -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <!-- слайдер -->
   <link rel="stylesheet" href="css/swiper.min.css">
 
@@ -179,15 +186,15 @@
                  
                   <div class="swiper-slide">
                     <picture>
-                      <source srcset="img/examples/example.webp" type="image/webp">
-                      <img src="img/examples/example.jpg" alt="Пример работ" class="swiper__img">
+                      <source srcset="img/examples/example2.webp" type="image/webp">
+                      <img src="img/examples/example2.jpg" alt="Пример работ" class="swiper__img">
                     </picture>
                   </div>
 
                   <div class="swiper-slide">
                     <picture>
-                      <source srcset="img/examples/example.webp" type="image/webp">
-                      <img src="img/examples/example.jpg" alt="Пример работ" class="swiper__img">
+                      <source srcset="img/examples/example3.webp" type="image/webp">
+                      <img src="img/examples/example3.jpg" alt="Пример работ" class="swiper__img">
                     </picture>
                   </div>
 
@@ -212,10 +219,10 @@
               <img src="img/camera.svg" alt="camera">
             </div>
           </div>
-          <div class="control__video video">
-            <div class="video-wrap">
-              <div class="video__play" id="play">
-                <img src="img/controls/video-mask.jpg" alt="" class="video__play">
+          <div class="control__video video"> <!-- page-->
+            <div class="video-wrap"><!-- video-->
+              <div class="video__play video__play--mask" id="play"> <!--video__media-->
+                <img src="img/controls/video-mask.jpg" alt="" class="video__play " id="play">
                 <img src="img/controls/play-icon.svg" alt="" class="play">
               </div>
             </div>
@@ -422,7 +429,7 @@
                     <li class="card__item">План потолков</li>
                     <li class="card__item">План этажей</li>
                     <li class="card__item">План электрики</li>
-                    <li class="card__item">План света</li>
+                    <li class="card__item card__item--more">План света</li>
                     <li class="card__item">Стенные развертки</li>
                     <li class="card__item">3D визуализация</li>
                     <li class="card__item">Смета на материалы</li>

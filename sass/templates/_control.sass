@@ -24,14 +24,15 @@
         position: relative
         width: 100%
         height: 0
-        padding-bottom: 53.13%
+        padding-bottom: 56.25%
       &__play
         position: absolute
-        content: ''
         top: 0
         left: 0
         height: 100%
         width: 100%
+        // z-index: 2
+      &__play--mask
         &::after
           position: absolute
           content: ''
@@ -40,9 +41,9 @@
           width: 100%
           height: 100%
           background-color: rgba(black, 0.8)
+          // z-index: 5
     .play
       position: absolute
-      content: ''
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
@@ -80,6 +81,7 @@
       position: absolute
       bottom: -15px
       left: 0
+      color: red
       width: 110%
   &__input
     color: $dark
